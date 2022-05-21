@@ -1,4 +1,6 @@
-import { findElement, paintCards } from './index.js';
+import { findElement, paintCards, isElementExist } from './index.js';
 
-paintCards();
-findElement();
+document.addEventListener('DOMContentLoaded', function () {
+  isElementExist(".item", paintCards);
+  isElementExist(".item", findElement);
+});
