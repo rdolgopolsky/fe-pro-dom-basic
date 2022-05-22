@@ -16,8 +16,14 @@ export const findElement = () => {
 
     while (elem) {
       if (elem.matches(".likedItem")) {
-        elem.style.backgroundColor = "blue";
-        break;
+        if (elem.matches(".likedItem:last-child")) {
+          elem.style.backgroundColor = "blue";
+          break;
+        }
+        else {
+          elem.style.backgroundColor = "blue";
+          elem = elem.nextElementSibling;
+        }
       }
       else {
         elem = elem.nextElementSibling;
