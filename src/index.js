@@ -15,7 +15,6 @@ export const findElement = () => {
     let elem = firstCard.nextElementSibling;
 
     while (elem) {
-      console.log("shit");
       if (elem.matches(".likedItem")) {
         if (elem.matches(".likedItem:last-child")) {
           elem.style.backgroundColor = "blue";
