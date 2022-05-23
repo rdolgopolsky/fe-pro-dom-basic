@@ -7,34 +7,14 @@ export const paintCards = () => {
 };
 
 export const findElement = () => {
-  let firstCard = document.querySelector(".item");
+  let elem = document.querySelector(".item");
 
-  if (firstCard.matches(".likedItem")) {
-    firstCard.style.backgroundColor = "blue";
-  } else {
-    let elem = firstCard.nextElementSibling;
-
-    while (elem) {
-      if (elem.matches(".likedItem")) {
-        if (elem.matches(".likedItem:last-child")) {
-          elem.style.backgroundColor = "blue";
-          break;
-        }
-        else {
-          elem.style.backgroundColor = "blue";
-          elem = elem.nextElementSibling;
-        }
-      }
-      else if (elem.matches(":last-child")) {
-        break;
-      }
-      else {
-        elem = elem.nextElementSibling;
-      }
+  while (elem) {
+    if (elem.matches(".likedItem")) {
+      elem.style.backgroundColor = "blue";
     }
+    elem = elem.nextElementSibling;
   }
-
-
 };
 
 // Helper if element exist then call function
